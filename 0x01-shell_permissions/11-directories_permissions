@@ -1,2 +1,3 @@
 #!/bin/bash
-chmod -iR +x .
+ chmod a+x "$dir"
+
