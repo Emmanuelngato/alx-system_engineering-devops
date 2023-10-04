@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $PATH |tr ":" "\n" | xargs -I {} sh -c 'find {} -mindepth 1 -type d | wc -l' | awk '{s+=$1} END {print s}' 
+echo $((`echo $PATH | grep -o ":/" | wc -l`+ 1))
