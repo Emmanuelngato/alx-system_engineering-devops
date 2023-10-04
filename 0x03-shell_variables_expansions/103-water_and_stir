@@ -1,0 +1,5 @@
+#!/bin/bash
+WATER_DECIMAL=$(echo $WATER | tr 'water' '01234' | tr -d '\n')
+STIR_DECIMAL=$(echo $STIR | tr 'stir' '01234' | tr -d '\n')
+RESULT_DECIMAL=$(echo "$WATER_DECIMAL + $STIR_DECIMAL" | bc)
+echo $RESULT_DECIMAL | tr '0123456789' 'bestchol'
